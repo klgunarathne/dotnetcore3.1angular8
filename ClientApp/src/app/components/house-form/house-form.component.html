@@ -1,0 +1,49 @@
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="houseForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" id="city" class="form-control" formControlName="city" required/>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="bedrooms">Bed Rooms</label>
+            <input type="number" id="bedrooms" class="form-control" formControlName="bedRooms" required/>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="guest">Guest</label>
+            <input type="number" id="guest" class="form-control" formControlName="guest"/>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="beds">Beds</label>
+            <input type="number" id="beds" class="form-control" formControlName="beds"/>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="rentPerNight">Rent Per Night</label>
+            <input type="number" id="rentPerNight" class="form-control" formControlName="rentPerNight" required/>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="type">House Type</label>
+            <select class="form-control" id="type" formControlName="type" required>
+              <option value="{{type.name}}" *ngFor="let type of types">{{
+                type.name
+              }}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+        <button class="btn btn-primary">Add</button>
+    </form>
+  </div>
+</div>

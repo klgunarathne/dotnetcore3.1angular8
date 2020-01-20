@@ -1,0 +1,17 @@
+<div class="card ml-5" style="width: 18em;">
+  <div>
+    <img class="card-img-top" src="./assets/images/image3.jpg" alt="Card image cap">
+  <span class="badge badge-pill badge-primary button-overlay">{{house.rentPerNight | currency:'Rs.'}}</span>
+  </div>
+  <div class="card-body">
+  <h5 class="card-title">{{house.city}} - {{house.type}}</h5>
+    <i class="fa fa-bed mr-1"></i>{{house.beds}}
+    <i class="fa fa-home mr-1"></i>{{house.bedRooms}}
+    <i class="fa fa-user mr-1"></i>{{house.guest}}
+  </div>
+  <div class="card-body">
+    <div style="text-align:center">
+      <star-rating value="2" totalstars="5" checkedcolor="red" uncheckedcolor="yellow" size="24px" readonly="false"></star-rating>
+    </div>
+  </div>
+</div>
